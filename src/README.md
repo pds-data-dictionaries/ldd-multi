@@ -9,11 +9,13 @@ Steward: PPI
 - [1.0.0.0](1.0.0.0)
 
 ## Build Process
+Generate XML schema, schematron and documentation.
 
 - From inside the src directory:
 
 ```
 lddtool -lp ldd-multi.xml
+pds-ldd-doc ldd-multi.xml > README.md
 ```
 
 - Rename all "ldd-multi-MULTI-1000.*" to "PDS4-MULTI-1900-1000.*"
