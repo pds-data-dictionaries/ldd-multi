@@ -1,26 +1,5 @@
-# Multi Local Data Dictionary (LDD)
+# LDD Source Directory
 
-The Multi dictionary contains classes that describe the composition of multidimensional data consisting of Array (and Array subclass) data objects. It provides a way to associated data objects and align the objects in general multi-dimensional structures. It supercedes the "particle" and "wave" local data dictionaries.
+This directory should contain one IngestLDD for the LDD being built. The auto-generation script does not currently support multiple versions of an LDD being maintained.
 
-Steward: PPI
-
-## Versions
-
-- [1.0.0.0](1.0.0.0)
-
-## Build Process
-Generate XML schema, schematron and documentation.
-
-- From inside the src directory:
-
-```
-lddtool -lp ldd-multi.xml
-pds-ldd-doc ldd-multi.xml > README.md
-```
-
-- Rename all "ldd-multi-MULTI-1000.*" to "PDS4-MULTI-1900-1000.*"
-
-where "1900" is the IM build version and "1000" is the LDD version.
-
-- Move the "PDS4-MULTI-1900-1000.*" to the proper build folder.
-
+See the [tutorial on updating and building an IngestLDD](https://pds-data-dictionaries.github.io/support/tutorials.html#ldd-update-and-build-tutorial) and the [LDD Update Process](https://pds-data-dictionaries.github.io/development/ldd-update.html) for more details.
