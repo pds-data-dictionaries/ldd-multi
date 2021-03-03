@@ -83,7 +83,7 @@
 			<maximum_occurrences>1</maximum_occurrences>
 		</DD_Association>
 		<DD_Association>
-			<identifier_reference>multi.axis_number</identifier_reference>
+			<identifier_reference>multi.primary_axis_number</identifier_reference>
 			<reference_type>attribute_of</reference_type>
 			<minimum_occurrences>1</minimum_occurrences>
 			<maximum_occurrences>1</maximum_occurrences>
@@ -93,7 +93,7 @@
 	<DD_Class>
 		<name>Face_Axis</name>
 		<version_id>1.0</version_id>
-		<local_identifier>multi.Face_Plane</local_identifier>
+		<local_identifier>multi.Face_Axis</local_identifier>
 		<submitter_name>J. Mafi</submitter_name>
 		<definition>The Face_Axis class associates one of the axes of a face data array with one of those of the main (primary) data array.</definition>
 		<DD_Association>
