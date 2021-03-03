@@ -216,8 +216,10 @@
 		<rule_context>multi:Multidimensional_Data/multi:Primary_Value/pds:Local_Internal_Reference</rule_context>
 		<DD_Rule_Statement>
 			<rule_type>Assert</rule_type>
-			<rule_test>pds:local_reference_type = 'multi_to_primary_value'</rule_test>
-			<rule_message>For Local_Internal_Reference in multi:Multidimensional_Data/multi:Primary_Value, pds:local_reference_type must be 'multi_to_primary_value'.</rule_message>
+			<rule_test>pds:local_reference_type = 'multi_to_primary_value'
+			</rule_test>
+			<rule_message>For Local_Internal_Reference in multi:Multidimensional_Data/multi:Primary_Value, pds:local_reference_type must be 'multi_to_primary_value'.
+			</rule_message>
 		</DD_Rule_Statement>
 	</DD_Rule>
 	
