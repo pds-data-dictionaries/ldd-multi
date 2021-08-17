@@ -40,7 +40,7 @@
 		   - Added DD_Rule to set permissible values for 
 		     Local_Internal_Reference/local_reference_type in Multidimensional_Data
 	</comment>
-	<last_modification_date_time>2021-02-23T17:32:40</last_modification_date_time>
+	<last_modification_date_time>2021-08-17T09:57:00</last_modification_date_time>
 
 	<DD_Attribute>
 		<name>primary_axis_number</name>
