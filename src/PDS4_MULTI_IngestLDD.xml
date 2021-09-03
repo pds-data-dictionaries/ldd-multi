@@ -244,4 +244,14 @@
 		</DD_Rule_Statement>
 	</DD_Rule>
 	
+	<DD_Rule>
+		<local_identifier>axis_value_reference_type</local_identifier>
+		<rule_context>multi:Multidimensional_Data/multi:Axis_Value/pds:Local_Internal_Reference</rule_context>
+		<DD_Rule_Statement>
+			<rule_type>Assert</rule_type>
+			<rule_test>pds:local_reference_type = 'multi_to_axis_value'</rule_test>
+			<rule_message>For Local_Internal_Reference in multi:Multidimensional_Data/multi:Axis_Value, pds:local_reference_type must be 'multi_to_axis_value'.</rule_message>
+		</DD_Rule_Statement>
+	</DD_Rule>
+	
 </Ingest_LDD>
