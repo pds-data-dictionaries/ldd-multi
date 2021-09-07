@@ -214,7 +214,7 @@
 	
 	<DD_Rule>
 		<local_identifier>primary_value_reference_type</local_identifier>
-		<rule_context>multi:Multidimensional_Data/multi:Primary_Value/pds:Local_Internal_Reference</rule_context>
+		<rule_context>multi:Primary_Value/pds:Local_Internal_Reference</rule_context>
 		<DD_Rule_Statement>
 			<rule_type>Assert</rule_type>
 			<rule_test>pds:local_reference_type = 'multi_to_primary_value'
@@ -226,7 +226,7 @@
 	
 	<DD_Rule>
 		<local_identifier>face_value_reference_type</local_identifier>
-		<rule_context>multi:Multidimensional_Data/multi:Face_Value/pds:Local_Internal_Reference</rule_context>
+		<rule_context>multi:Face_Value/pds:Local_Internal_Reference</rule_context>
 		<DD_Rule_Statement>
 			<rule_type>Assert</rule_type>
 			<rule_test>pds:local_reference_type = 'multi_to_face_value'</rule_test>
@@ -236,7 +236,7 @@
 	
 	<DD_Rule>
 		<local_identifier>aligned_value_reference_type</local_identifier>
-		<rule_context>multi:Multidimensional_Data/multi:Aligned_Value/pds:Local_Internal_Reference</rule_context>
+		<rule_context>multi:Aligned_Value/pds:Local_Internal_Reference</rule_context>
 		<DD_Rule_Statement>
 			<rule_type>Assert</rule_type>
 			<rule_test>pds:local_reference_type = 'multi_to_aligned_value'</rule_test>
@@ -246,7 +246,7 @@
 	
 	<DD_Rule>
 		<local_identifier>axis_value_reference_type</local_identifier>
-		<rule_context>multi:Multidimensional_Data/multi:Axis_Value/pds:Local_Internal_Reference</rule_context>
+		<rule_context>multi:Axis_Value/pds:Local_Internal_Reference</rule_context>
 		<DD_Rule_Statement>
 			<rule_type>Assert</rule_type>
 			<rule_test>pds:local_reference_type = 'multi_to_axis_value'</rule_test>
