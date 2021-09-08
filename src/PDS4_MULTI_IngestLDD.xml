@@ -219,7 +219,7 @@
 			<rule_type>Assert</rule_type>
 			<rule_test>pds:local_reference_type = 'multi_to_primary_value'
 			</rule_test>
-			<rule_message>For Local_Internal_Reference in multi:Multidimensional_Data/multi:Primary_Value, pds:local_reference_type must be 'multi_to_primary_value'.
+			<rule_message>For Local_Internal_Reference in multi:Primary_Value, pds:local_reference_type must be 'multi_to_primary_value'.
 			</rule_message>
 		</DD_Rule_Statement>
 	</DD_Rule>
@@ -230,7 +230,7 @@
 		<DD_Rule_Statement>
 			<rule_type>Assert</rule_type>
 			<rule_test>pds:local_reference_type = 'multi_to_face_value'</rule_test>
-			<rule_message>For Local_Internal_Reference in multi:Multidimensional_Data/multi:Face_Value, pds:local_reference_type must be 'multi_to_face_value'.</rule_message>
+			<rule_message>For Local_Internal_Reference in multi:Face_Value, pds:local_reference_type must be 'multi_to_face_value'.</rule_message>
 		</DD_Rule_Statement>
 	</DD_Rule>
 	
@@ -240,7 +240,7 @@
 		<DD_Rule_Statement>
 			<rule_type>Assert</rule_type>
 			<rule_test>pds:local_reference_type = 'multi_to_aligned_value'</rule_test>
-			<rule_message>For Local_Internal_Reference in multi:Multidimensional_Data/multi:Aligned_Value, pds:local_reference_type must be 'multi_to_aligned_value'.</rule_message>
+			<rule_message>For Local_Internal_Reference in multi:Aligned_Value, pds:local_reference_type must be 'multi_to_aligned_value'.</rule_message>
 		</DD_Rule_Statement>
 	</DD_Rule>
 	
@@ -250,7 +250,7 @@
 		<DD_Rule_Statement>
 			<rule_type>Assert</rule_type>
 			<rule_test>pds:local_reference_type = 'multi_to_axis_value'</rule_test>
-			<rule_message>For Local_Internal_Reference in multi:Multidimensional_Data/multi:Axis_Value, pds:local_reference_type must be 'multi_to_axis_value'.</rule_message>
+			<rule_message>For Local_Internal_Reference in multi:Axis_Value, pds:local_reference_type must be 'multi_to_axis_value'.</rule_message>
 		</DD_Rule_Statement>
 	</DD_Rule>
 	
