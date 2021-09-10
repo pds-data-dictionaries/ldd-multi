@@ -2,24 +2,26 @@
   {
     "dataDictionary": {
       "Title": "PDS4 Data Dictionary" ,
-      "Version": "1.14.0.0" ,
-      "Date": "Tue Aug 18 15:25:29 UTC 2020" ,
+      "IM Version": "1.16.0.0" ,
+      "LDD Version": "2.0.0.0" ,
+      "Date": "Wed Sep 08 17:42:57 UTC 2021" ,
       "Description": "This document is a dump of the contents of the PDS4 Data Dictionary" ,
+      "namespaces": ["pds:", "multi:"] ,
       "classDictionary": [
         {
           "class": {
-            "identifier": "0001_NASA_PDS_1.multi.Aligned_Values" ,
-            "title": "Aligned_Values" ,
+            "identifier": "0001_NASA_PDS_1.multi.Aligned_Value" ,
+            "title": "Aligned_Value" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "multi" ,
             "steward": "ppi" ,
             "versionId": "1.0.0.0" ,
             "isAbstract": "false" ,
             "isDeprecated": "false" ,
-            "description": "The Aligned_Values class describes the values which align element-by-element with the elements of a observation data array. The aligned values array must have the same dimensions as the observation array."
+            "description": "The Aligned_Value class identifies a value which aligns element-by-element with the main (primary) data array. The aligned values array must have the same dimensions as the observation array."
               , "associationList": [
              {"association": {
-                "identifier": "0001_NASA_PDS_1.multi.Aligned_Values.multi.Local_Internal_Reference" ,
+                "identifier": "0001_NASA_PDS_1.multi.Aligned_Value.pds.Local_Internal_Reference" ,
                 "title": "Local_Internal_Reference" ,
                 "assocType": "component_of" ,
                 "isAttribute": "false" ,
@@ -30,7 +32,7 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1010" ,
                 "classId": [
-                  "0001_NASA_PDS_1.multi.Local_Internal_Reference"
+                  "0001_NASA_PDS_1.pds.Local_Internal_Reference"
                  ]
               }
             }
@@ -39,19 +41,19 @@
         }
       , {
           "class": {
-            "identifier": "0001_NASA_PDS_1.multi.Axis_Values" ,
-            "title": "Axis_Values" ,
+            "identifier": "0001_NASA_PDS_1.multi.Axis_Value" ,
+            "title": "Axis_Value" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "multi" ,
             "steward": "ppi" ,
             "versionId": "1.0.0.0" ,
             "isAbstract": "false" ,
             "isDeprecated": "false" ,
-            "description": "The Axis_Values class describes the values which are associated with the elements along an axis of a observation data array."
+            "description": "The Axis_Value class identifies the data object which is associated with the one of the axes of the main data array."
               , "associationList": [
              {"association": {
-                "identifier": "0001_NASA_PDS_1.multi.Axis_Values.multi.axis_number" ,
-                "title": "axis_number" ,
+                "identifier": "0001_NASA_PDS_1.multi.Axis_Value.multi.primary_axis_number" ,
+                "title": "primary_axis_number" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
                 "isChoice": "false" ,
@@ -61,12 +63,12 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1020" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.multi.Axis_Values.multi.axis_number"
+                  "0001_NASA_PDS_1.multi.Axis_Value.multi.primary_axis_number"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.multi.Axis_Values.multi.Local_Internal_Reference" ,
+                "identifier": "0001_NASA_PDS_1.multi.Axis_Value.pds.Local_Internal_Reference" ,
                 "title": "Local_Internal_Reference" ,
                 "assocType": "component_of" ,
                 "isAttribute": "false" ,
@@ -77,7 +79,7 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1010" ,
                 "classId": [
-                  "0001_NASA_PDS_1.multi.Local_Internal_Reference"
+                  "0001_NASA_PDS_1.pds.Local_Internal_Reference"
                  ]
               }
             }
@@ -86,76 +88,92 @@
         }
       , {
           "class": {
-            "identifier": "0001_NASA_PDS_1.multi.Face_Plane" ,
-            "title": "Face_Plane" ,
+            "identifier": "0001_NASA_PDS_1.multi.Face_Axis" ,
+            "title": "Face_Axis" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "multi" ,
             "steward": "ppi" ,
             "versionId": "1.0.0.0" ,
             "isAbstract": "false" ,
             "isDeprecated": "false" ,
-            "description": "The Face_Plane class describes a plane which is defined by two axes."
+            "description": "The Face_Axis class associates one of the axes of a face data array with one of those of the main (primary) data array."
               , "associationList": [
              {"association": {
-                "identifier": "0001_NASA_PDS_1.multi.Face_Plane.multi.face_axis" ,
-                "title": "face_axis" ,
+                "identifier": "0001_NASA_PDS_1.multi.Face_Axis.multi.primary_axis_number" ,
+                "title": "primary_axis_number" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1010" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.multi.Face_Axis.multi.primary_axis_number"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.multi.Face_Axis.multi.face_axis_number" ,
+                "title": "face_axis_number" ,
+                "assocType": "attribute_of" ,
+                "isAttribute": "true" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1020" ,
+                "attributeId": [
+                  "0001_NASA_PDS_1.multi.Face_Axis.multi.face_axis_number"
+                 ]
+              }
+            }
+           ]
+          }
+        }
+      , {
+          "class": {
+            "identifier": "0001_NASA_PDS_1.multi.Face_Value" ,
+            "title": "Face_Value" ,
+            "registrationAuthorityId": "0001_NASA_PDS_1" ,
+            "nameSpaceId": "multi" ,
+            "steward": "ppi" ,
+            "versionId": "1.0.0.0" ,
+            "isAbstract": "false" ,
+            "isDeprecated": "false" ,
+            "description": "The Face_Value class identifies the data object which contains parameters associated with two or more axes of the main (primary) data array."
+              , "associationList": [
+             {"association": {
+                "identifier": "0001_NASA_PDS_1.multi.Face_Value.pds.Local_Internal_Reference" ,
+                "title": "Local_Internal_Reference" ,
+                "assocType": "component_of" ,
+                "isAttribute": "false" ,
+                "isChoice": "false" ,
+                "isAny": "false" ,
+                "groupName": "null" ,
+                "minimumCardinality": "1" ,
+                "maximumCardinality": "1" ,
+                "classOrder": "1010" ,
+                "classId": [
+                  "0001_NASA_PDS_1.pds.Local_Internal_Reference"
+                 ]
+              }
+            }
+           , {"association": {
+                "identifier": "0001_NASA_PDS_1.multi.Face_Value.multi.Face_Axis" ,
+                "title": "Face_Axis" ,
+                "assocType": "component_of" ,
+                "isAttribute": "false" ,
                 "isChoice": "false" ,
                 "isAny": "false" ,
                 "groupName": "null" ,
                 "minimumCardinality": "2" ,
-                "maximumCardinality": "2" ,
-                "classOrder": "1010" ,
-                "attributeId": [
-                  "0001_NASA_PDS_1.multi.Face_Plane.multi.face_axis"
-                 ]
-              }
-            }
-           ]
-          }
-        }
-      , {
-          "class": {
-            "identifier": "0001_NASA_PDS_1.multi.Face_Values" ,
-            "title": "Face_Values" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "multi" ,
-            "steward": "ppi" ,
-            "versionId": "1.0.0.0" ,
-            "isAbstract": "false" ,
-            "isDeprecated": "false" ,
-            "description": "The Face_Values class describes the values which are associated with the elements on the face of a observation data array."
-              , "associationList": [
-             {"association": {
-                "identifier": "0001_NASA_PDS_1.multi.Face_Values.multi.Local_Internal_Reference" ,
-                "title": "Local_Internal_Reference" ,
-                "assocType": "component_of" ,
-                "isAttribute": "false" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1010" ,
-                "classId": [
-                  "0001_NASA_PDS_1.multi.Local_Internal_Reference"
-                 ]
-              }
-            }
-           , {"association": {
-                "identifier": "0001_NASA_PDS_1.multi.Face_Values.multi.Face_Plane" ,
-                "title": "Face_Plane" ,
-                "assocType": "component_of" ,
-                "isAttribute": "false" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
+                "maximumCardinality": "16" ,
                 "classOrder": "1020" ,
                 "classId": [
-                  "0001_NASA_PDS_1.multi.Face_Plane"
+                  "0001_NASA_PDS_1.multi.Face_Axis"
                  ]
               }
             }
@@ -164,81 +182,18 @@
         }
       , {
           "class": {
-            "identifier": "0001_NASA_PDS_1.multi.Local_Internal_Reference" ,
-            "title": "Local_Internal_Reference" ,
+            "identifier": "0001_NASA_PDS_1.multi.Multidimensional_Data" ,
+            "title": "Multidimensional_Data" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "multi" ,
             "steward": "ppi" ,
             "versionId": "1.0.0.0" ,
             "isAbstract": "false" ,
             "isDeprecated": "false" ,
-            "description": "The Local_Internal_Reference class is used to cross-reference other classes or objects within the product."
+            "description": "The Multidimensional_Data describes the data values which are associated with the elements along an axis or on the face of a observation data array."
               , "associationList": [
              {"association": {
-                "identifier": "0001_NASA_PDS_1.multi.Local_Internal_Reference.pds.local_identifier_reference" ,
-                "title": "local_identifier_reference" ,
-                "assocType": "attribute_of" ,
-                "isAttribute": "true" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1010" ,
-                "attributeId": [
-                  "0001_NASA_PDS_1.multi.Local_Internal_Reference.pds.local_identifier_reference"
-                 ]
-              }
-            }
-           , {"association": {
-                "identifier": "0001_NASA_PDS_1.multi.Local_Internal_Reference.multi.local_reference_type" ,
-                "title": "local_reference_type" ,
-                "assocType": "attribute_of" ,
-                "isAttribute": "true" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "1" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1020" ,
-                "attributeId": [
-                  "0001_NASA_PDS_1.multi.Local_Internal_Reference.multi.local_reference_type"
-                 ]
-              }
-            }
-           , {"association": {
-                "identifier": "0001_NASA_PDS_1.multi.Local_Internal_Reference.pds.comment" ,
-                "title": "comment" ,
-                "assocType": "attribute_of" ,
-                "isAttribute": "true" ,
-                "isChoice": "false" ,
-                "isAny": "false" ,
-                "groupName": "null" ,
-                "minimumCardinality": "0" ,
-                "maximumCardinality": "1" ,
-                "classOrder": "1030" ,
-                "attributeId": [
-                  "0001_NASA_PDS_1.multi.Local_Internal_Reference.pds.comment"
-                 ]
-              }
-            }
-           ]
-          }
-        }
-      , {
-          "class": {
-            "identifier": "0001_NASA_PDS_1.multi.Particle_Observation" ,
-            "title": "Particle_Observation" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "multi" ,
-            "steward": "ppi" ,
-            "versionId": "1.0.0.0" ,
-            "isAbstract": "false" ,
-            "isDeprecated": "false" ,
-            "description": "The Particle_Observation describes the data of a observation and the values which are associated with the elements along an axis or on the face of a observation data array."
-              , "associationList": [
-             {"association": {
-                "identifier": "0001_NASA_PDS_1.multi.Particle_Observation.pds.name" ,
+                "identifier": "0001_NASA_PDS_1.multi.Multidimensional_Data.pds.name" ,
                 "title": "name" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
@@ -249,12 +204,12 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1010" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.multi.Particle_Observation.pds.name"
+                  "0001_NASA_PDS_1.multi.Multidimensional_Data.pds.name"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.multi.Particle_Observation.pds.local_identifier" ,
+                "identifier": "0001_NASA_PDS_1.multi.Multidimensional_Data.pds.local_identifier" ,
                 "title": "local_identifier" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
@@ -265,12 +220,12 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1020" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.multi.Particle_Observation.pds.local_identifier"
+                  "0001_NASA_PDS_1.multi.Multidimensional_Data.pds.local_identifier"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.multi.Particle_Observation.pds.description" ,
+                "identifier": "0001_NASA_PDS_1.multi.Multidimensional_Data.pds.description" ,
                 "title": "description" ,
                 "assocType": "attribute_of" ,
                 "isAttribute": "true" ,
@@ -281,13 +236,13 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1030" ,
                 "attributeId": [
-                  "0001_NASA_PDS_1.multi.Particle_Observation.pds.description"
+                  "0001_NASA_PDS_1.multi.Multidimensional_Data.pds.description"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.multi.Particle_Observation.multi.Primary_Values" ,
-                "title": "Primary_Values" ,
+                "identifier": "0001_NASA_PDS_1.multi.Multidimensional_Data.multi.Primary_Value" ,
+                "title": "Primary_Value" ,
                 "assocType": "component_of" ,
                 "isAttribute": "false" ,
                 "isChoice": "false" ,
@@ -297,13 +252,13 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1040" ,
                 "classId": [
-                  "0001_NASA_PDS_1.multi.Primary_Values"
+                  "0001_NASA_PDS_1.multi.Primary_Value"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.multi.Particle_Observation.multi.Axis_Values" ,
-                "title": "Axis_Values" ,
+                "identifier": "0001_NASA_PDS_1.multi.Multidimensional_Data.multi.Axis_Value" ,
+                "title": "Axis_Value" ,
                 "assocType": "component_of" ,
                 "isAttribute": "false" ,
                 "isChoice": "false" ,
@@ -313,13 +268,13 @@
                 "maximumCardinality": "*" ,
                 "classOrder": "1050" ,
                 "classId": [
-                  "0001_NASA_PDS_1.multi.Axis_Values"
+                  "0001_NASA_PDS_1.multi.Axis_Value"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.multi.Particle_Observation.multi.Face_Values" ,
-                "title": "Face_Values" ,
+                "identifier": "0001_NASA_PDS_1.multi.Multidimensional_Data.multi.Face_Value" ,
+                "title": "Face_Value" ,
                 "assocType": "component_of" ,
                 "isAttribute": "false" ,
                 "isChoice": "false" ,
@@ -329,13 +284,13 @@
                 "maximumCardinality": "*" ,
                 "classOrder": "1060" ,
                 "classId": [
-                  "0001_NASA_PDS_1.multi.Face_Values"
+                  "0001_NASA_PDS_1.multi.Face_Value"
                  ]
               }
             }
            , {"association": {
-                "identifier": "0001_NASA_PDS_1.multi.Particle_Observation.multi.Aligned_Values" ,
-                "title": "Aligned_Values" ,
+                "identifier": "0001_NASA_PDS_1.multi.Multidimensional_Data.multi.Aligned_Value" ,
+                "title": "Aligned_Value" ,
                 "assocType": "component_of" ,
                 "isAttribute": "false" ,
                 "isChoice": "false" ,
@@ -345,7 +300,7 @@
                 "maximumCardinality": "*" ,
                 "classOrder": "1070" ,
                 "classId": [
-                  "0001_NASA_PDS_1.multi.Aligned_Values"
+                  "0001_NASA_PDS_1.multi.Aligned_Value"
                  ]
               }
             }
@@ -354,18 +309,18 @@
         }
       , {
           "class": {
-            "identifier": "0001_NASA_PDS_1.multi.Primary_Values" ,
-            "title": "Primary_Values" ,
+            "identifier": "0001_NASA_PDS_1.multi.Primary_Value" ,
+            "title": "Primary_Value" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "multi" ,
             "steward": "ppi" ,
             "versionId": "1.0.0.0" ,
             "isAbstract": "false" ,
             "isDeprecated": "false" ,
-            "description": "The Primary_Values class describes the values which are the primary observation data array."
+            "description": "The Primary_Value class identifies the data object which constitutes the main data array."
               , "associationList": [
              {"association": {
-                "identifier": "0001_NASA_PDS_1.multi.Primary_Values.multi.Local_Internal_Reference" ,
+                "identifier": "0001_NASA_PDS_1.multi.Primary_Value.pds.Local_Internal_Reference" ,
                 "title": "Local_Internal_Reference" ,
                 "assocType": "component_of" ,
                 "isAttribute": "false" ,
@@ -376,7 +331,7 @@
                 "maximumCardinality": "1" ,
                 "classOrder": "1010" ,
                 "classId": [
-                  "0001_NASA_PDS_1.multi.Local_Internal_Reference"
+                  "0001_NASA_PDS_1.pds.Local_Internal_Reference"
                  ]
               }
             }
@@ -387,13 +342,13 @@
     , "attributeDictionary": [
         {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.multi.Axis_Values.multi.axis_number" ,
-            "title": "axis_number" ,
+            "identifier": "0001_NASA_PDS_1.multi.Axis_Value.multi.primary_axis_number" ,
+            "title": "primary_axis_number" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "multi" ,
             "steward": "ppi" ,
-            "versionId": "1.14" ,
-            "description": "The index of the axis. The first axis is numbered as 1." ,
+            "versionId": "1.16" ,
+            "description": "The index of the axis in the primary array. The first axis is numbered as 1." ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -412,13 +367,13 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.multi.Face_Plane.multi.face_axis" ,
-            "title": "face_axis" ,
+            "identifier": "0001_NASA_PDS_1.multi.Face_Axis.multi.face_axis_number" ,
+            "title": "face_axis_number" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "multi" ,
             "steward": "ppi" ,
-            "versionId": "1.14" ,
-            "description": "The axis number that defines one axis of a face plane." ,
+            "versionId": "1.16" ,
+            "description": "The index of the axis in the face array. The first axis is numbered as 1." ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
@@ -437,47 +392,22 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.multi.Local_Internal_Reference.multi.local_reference_type" ,
-            "title": "local_reference_type" ,
+            "identifier": "0001_NASA_PDS_1.multi.Face_Axis.multi.primary_axis_number" ,
+            "title": "primary_axis_number" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "multi" ,
             "steward": "ppi" ,
-            "versionId": "1.14" ,
-            "description": "The local_reference_type attribute provides the name of an association between an entity identified by a local_identifier_reference and another corresponding entity identified by a local_identifier" ,
-            "isNillable": "false" ,
-            "isEnumerated": "true" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.multi.Local_Internal_Reference.pds.comment" ,
-            "title": "comment" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "pds" ,
-            "steward": "pds" ,
-            "versionId": "1.14" ,
-            "description": "The comment attribute is a character string expressing one or more remarks or thoughts relevant to the object." ,
+            "versionId": "1.16" ,
+            "description": "The index of the axis in the primary array. The first axis is numbered as 1." ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
             "isDeprecated": "false" ,
-            "dataType": "ASCII_Short_String_Collapsed" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Short_String_Collapsed" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
+            "dataType": "ASCII_Integer" ,
+            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Integer" ,
+            "minimumCharacters": "Unbounded" ,
+            "maximumCharacters": "Unbounded" ,
+            "minimumValue": "1" ,
+            "maximumValue": "9223372036854775807" ,
             "pattern": "null" ,
             "unitOfMeasure": "null" ,
             "unitOfMeasureId": "null" ,
@@ -487,37 +417,12 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.multi.Local_Internal_Reference.pds.local_identifier_reference" ,
-            "title": "local_identifier_reference" ,
-            "registrationAuthorityId": "0001_NASA_PDS_1" ,
-            "nameSpaceId": "pds" ,
-            "steward": "pds" ,
-            "versionId": "1.14" ,
-            "description": "The local_identifier_reference attribute provides the value of the local_identifier of the entity described by the referencing class. Note that a local_identifier attribute, with the same value as this local_identifier_reference, must be present within the label." ,
-            "isNillable": "false" ,
-            "isEnumerated": "false" ,
-            "isDeprecated": "false" ,
-            "dataType": "ASCII_Local_Identifier_Reference" ,
-            "dataTypeId": "0001_NASA_PDS_1.pds.ASCII_Local_Identifier_Reference" ,
-            "minimumCharacters": "1" ,
-            "maximumCharacters": "255" ,
-            "minimumValue": "Unbounded" ,
-            "maximumValue": "Unbounded" ,
-            "pattern": "null" ,
-            "unitOfMeasure": "null" ,
-            "unitOfMeasureId": "null" ,
-            "unitId": "null" ,
-            "defaultUnitId": "null"
-          }
-        }
-      , {
-          "attribute": {
-            "identifier": "0001_NASA_PDS_1.multi.Particle_Observation.pds.description" ,
+            "identifier": "0001_NASA_PDS_1.multi.Multidimensional_Data.pds.description" ,
             "title": "description" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "pds" ,
             "steward": "pds" ,
-            "versionId": "1.14" ,
+            "versionId": "1.16" ,
             "description": "The description attribute provides a statement, picture in words, or account that describes or is otherwise relevant to the object." ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
@@ -537,12 +442,12 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.multi.Particle_Observation.pds.local_identifier" ,
+            "identifier": "0001_NASA_PDS_1.multi.Multidimensional_Data.pds.local_identifier" ,
             "title": "local_identifier" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "pds" ,
             "steward": "pds" ,
-            "versionId": "1.14" ,
+            "versionId": "1.16" ,
             "description": "The local_identifier attribute provides a character string which uniquely identifies the containing object within the label." ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
@@ -562,12 +467,12 @@
         }
       , {
           "attribute": {
-            "identifier": "0001_NASA_PDS_1.multi.Particle_Observation.pds.name" ,
+            "identifier": "0001_NASA_PDS_1.multi.Multidimensional_Data.pds.name" ,
             "title": "name" ,
             "registrationAuthorityId": "0001_NASA_PDS_1" ,
             "nameSpaceId": "pds" ,
             "steward": "pds" ,
-            "versionId": "1.14" ,
+            "versionId": "1.16" ,
             "description": "The name attribute provides a word or combination of words by which the object is known." ,
             "isNillable": "false" ,
             "isEnumerated": "false" ,
