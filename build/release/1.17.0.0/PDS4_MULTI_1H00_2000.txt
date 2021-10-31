@@ -1,18 +1,18 @@
 PDS4 Local Data Dictionary Processing Report
 
 Configuration:
-   LDDTool Version        13.0.2
+   LDDTool Version        13.1.0
    LDD Version Id:        2.0.0.0
-   LDD Label Version Id:  1.0
+   LDD Label Version Id:  1.23
    LDD Discipline (T/F):  true
    LDD Namespace URL:     http://pds.nasa.gov/pds4/
    LDD URN Prefix:        urn:nasa:pds:
-   Time                   Wed Sep 08 17:42:58 UTC 2021
-   Common Schema          [PDS4_PDS_1F00.xsd]
-   Common Schematron      [PDS4_PDS_1F00.sch]
-   IM Version Id:         1.15.0.0
+   Time                   Sun Oct 31 20:45:26 UTC 2021
+   Common Schema          [PDS4_PDS_1H00.xsd]
+   Common Schematron      [PDS4_PDS_1H00.sch]
+   IM Version Id:         1.17.0.0
    IM Namespace Id:       pds
-   IM Label Version Id:   1.0
+   IM Label Version Id:   1.23
    IM Object Model        [UpperModel.pont]
    IM Data Dictionary     [dd11179.pins]
    IM Configuration File  [MDPTNConfigClassDisp.xml]
@@ -73,13 +73,13 @@ Parsed Input - Header:
 Parsed Input - Attributes:
 
    name                   primary_axis_number
-   version                1.15
+   version                1.17
    value data type        ASCII_Integer
    description            The index of the axis in the primary array. The first axis is numbered as 1.
    minimum value          1
 
    name                   face_axis_number
-   version                1.15
+   version                1.17
    value data type        ASCII_Integer
    description            The index of the axis in the face array. The first axis is numbered as 1.
    minimum value          1
