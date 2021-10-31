@@ -39,10 +39,6 @@ jobs:
           
           # Baseline: Set pds4 version to versions from file
           echo "::set-output name=matrix::{\"pds4_version\": $versions}"
-          
-          # Example of using development PDS4 Release for v1.16.0.0
-          # Update with appropriate version as needed
-          # echo "::set-output name=matrix::{\"pds4_version\": $versions, \"include\":[{\"pds4_version\":\"1.16.0.0\",\"pds4_development_release\":true}]}"
 
   build:
     name: 'LDD Build'
@@ -79,10 +75,6 @@ jobs:
           test_path: ${{ env.REGRESSION_TEST_PATH }}
           logs_path: ${{ env.LOGS_PATH }}
           token: ${{ secrets.ADMIN_GITHUB_TOKEN }}
-
-      - name: Check logs
-        run: |
-          ls -R ${{ env.LOGS_PATH }}
 
       - name: Upload LDDs to Github Action Artifacts
         uses: actions/upload-artifact@v1
