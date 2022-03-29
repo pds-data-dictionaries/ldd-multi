@@ -240,10 +240,10 @@
    </Reference_List>
    <File_Area_Observational>
       <File>
-         <file_name>mvn_swe_l2_arcpad_20201113_v04_r02.cdf</file_name>
+         <file_name>No.Data</file_name>
          <creation_date_time>2021-03-30T14:53:42</creation_date_time>
-         <file_size unit="byte">886205414</file_size>
-         <md5_checksum>05e0ee7992dafce335963f79ca282986</md5_checksum>
+         <file_size unit="byte">0</file_size>
+         <!-- <md5_checksum>05e0ee7992dafce335963f79ca282986</md5_checksum> -->
       </File>
       <Header>
          <name>CDF Header</name>

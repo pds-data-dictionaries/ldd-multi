@@ -161,10 +161,12 @@
    </Observation_Area>
    <File_Area_Observational>
       <File>
-         <file_name>mvn_lpw_l2_lpiv_20200813_v02_r01.cdf</file_name>
+         <file_name>No.Data</file_name>
          <creation_date_time>2020-09-07T13:34:06</creation_date_time>
-         <file_size unit="byte">9963074</file_size>
+         <file_size unit="byte">0</file_size>
+         <!--
          <md5_checksum>460b2abe21505c0741ddec768a62c8c6</md5_checksum>
+          -->
       </File>
       <Header>
          <name>CDF Header</name>
