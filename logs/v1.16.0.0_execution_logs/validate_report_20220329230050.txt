@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version                       2.1.4
-   Date                          2022-03-29T22:52:59Z
+   Date                          2022-03-29T23:00:51Z
 
 Parameters:
    Targets                       [file:/home/runner/work/ldd-multi/ldd-multi/test/multi-mvn_lpw_l2_lpiv_20200813_v02_r01_VALID.xml]
    Rule Type                     pds4.label
-   User Specified Schemas        [file:/home/runner/work/ldd-multi/ldd-multi/build/development/b44ca17b75d6d5313042ec39c326ee3b755ce194/1.17.0.0/PDS4_MULTI_1H00_2000.xsd, file:/tmp/PDS4_PDS_1H00.xsd]
-   User Specified Schematrons    [file:/home/runner/work/ldd-multi/ldd-multi/build/development/b44ca17b75d6d5313042ec39c326ee3b755ce194/1.17.0.0/PDS4_MULTI_1H00_2000.sch, file:/tmp/PDS4_PDS_1H00.sch]
+   User Specified Schemas        [file:/home/runner/work/ldd-multi/ldd-multi/build/development/8e5d01295bbc2eeaf8f8e0827daaa9fed63905bc/1.16.0.0/PDS4_MULTI_1G00_2000.xsd, file:/tmp/PDS4_PDS_1G00.xsd]
+   User Specified Schematrons    [file:/home/runner/work/ldd-multi/ldd-multi/build/development/8e5d01295bbc2eeaf8f8e0827daaa9fed63905bc/1.16.0.0/PDS4_MULTI_1G00_2000.sch, file:/tmp/PDS4_PDS_1G00.sch]
    Severity Level                WARNING
    Recurse Directories           true
    File Filters Used             [*.xml, *.XML]
@@ -22,18 +22,17 @@ Parameters:
 
 Product Level Validation Results
 
-  FAIL: file:/home/runner/work/ldd-multi/ldd-multi/test/multi-mvn_lpw_l2_lpiv_20200813_v02_r01_VALID.xml
-      ERROR  [error.label.schematron]   line 33, 34: The attribute pds:Identification_Area/pds:information_model_version must be equal to the value '1.17.0.0'.
+  PASS: file:/home/runner/work/ldd-multi/ldd-multi/test/multi-mvn_lpw_l2_lpiv_20200813_v02_r01_VALID.xml
         1 product validation(s) completed
 
 Summary:
 
-  1 error(s)
+  0 error(s)
   0 warning(s)
 
   Product Validation Summary:
-    0          product(s) passed
-    1          product(s) failed
+    1          product(s) passed
+    0          product(s) failed
     0          product(s) skipped
 
   Referential Integrity Check Summary:
@@ -41,9 +40,7 @@ Summary:
     0          check(s) failed
     0          check(s) skipped
 
-  Message Types:
-    1            error.label.schematron
 
 End of Report
-Completed execution in 4919 ms
+Completed execution in 4362 ms
 
