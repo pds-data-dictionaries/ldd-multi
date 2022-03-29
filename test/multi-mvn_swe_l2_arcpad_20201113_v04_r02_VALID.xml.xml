@@ -98,7 +98,7 @@
             <reference_type>data_to_target</reference_type>
          </Internal_Reference>
       </Target_Identification>
-      <Mission_Area>
+<!--       <Mission_Area>
          <mvn:MAVEN>
             <mvn:mission_phase_name>EM-5</mvn:mission_phase_name>
             <mvn:spacecraft_clock_start_count>4.3155287910203555E13</mvn:spacecraft_clock_start_count>
@@ -121,7 +121,7 @@
                <mvn:value>43200</mvn:value>
             </mvn:Parameter>
          </mvn:MAVEN>
-      </Mission_Area>
+      </Mission_Area> -->
       <Discipline_Area>
          <multi:Multidimensional_Data>
             <multi:name>counts</multi:name>
@@ -199,7 +199,7 @@
                </multi:Face_Axis>
             </multi:Face_Value>
          </multi:Multidimensional_Data>
-         <alt:Alternate_Values>
+<!--          <alt:Alternate_Values>
             <alt:name>time values</alt:name>
             <alt:Data_Values>
                <alt:Local_Internal_Reference>
@@ -219,7 +219,7 @@
                   <alt:local_reference_type>data_values_to_data_values</alt:local_reference_type>
                </alt:Local_Internal_Reference>
             </alt:Data_Values>
-         </alt:Alternate_Values>
+         </alt:Alternate_Values> -->
       </Discipline_Area>
    </Observation_Area>
    <Reference_List>
