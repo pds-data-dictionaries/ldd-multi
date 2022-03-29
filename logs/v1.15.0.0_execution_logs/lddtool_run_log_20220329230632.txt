@@ -1,40 +1,41 @@
 
 >>  INFO LDDTOOL Version: 13.1.0
->>  INFO IM Version Id: 1.17.0.0
+>>  INFO IM Version Id: 1.15.0.0
 >>  INFO IM Namespace Id: pds
->>  INFO IM Label Version Id: 1.23
->>  INFO Date: Tue Mar 29 23:00:42 UTC 2022
+>>  INFO IM Label Version Id: 1.21
+>>  INFO Date: Tue Mar 29 23:06:32 UTC 2022
 >>  INFO PARENT_DIR: /tmp/lddtool-13.1.0
 >>  INFO SCRIPT_DIR: /tmp/lddtool-13.1.0/bin
 >>  INFO LIB_DIR: /tmp/lddtool-13.1.0/lib
 
->>> INFO Init:  - Config.Properties Namespace Id Found:multi
->>> INFO Init:  - Config.Properties Namespace Id Using:multi
+>>> INFO Init:  - Config.Properties Namespace Id Using:pds
 >>> INFO Init:  - LDD Dictionary_Type is Discipline
 >>> INFO Attribute: <primary_axis_number> - The default minimum value provided by the attribute's data type is being overridden with 1
 >>> INFO Attribute: <face_axis_number> - The default minimum value provided by the attribute's data type is being overridden with 1
+>>> WARNING Init:  - Config.Properties Namespace Id Not Found:multi
 >>> WARNING Header:  - New steward has been specified:ppi
 >>> WARNING Header:  - New namespace id has been specified:multi
 
  -- LDDTool Execution Summary --
-     2 warning(s)
+     3 warning(s)
      0 error(s)
      0 fatal error(s)
 
 Input:
 
-     - IM Version: 1H00
+     - IM Version: 1F00
      - PDS4 Flag: true
      - LDD Flag: true
+     - IM Version: true
      - Export JSON Flag: true
 
      - Ingest LDD(s): /home/runner/work/ldd-multi/ldd-multi/src/PDS4_MULTI_IngestLDD.xml
 
 Output:
 
-     - ./PDS4_MULTI_1H00_2000.xsd
-     - ./PDS4_MULTI_1H00_2000.sch
-     - ./PDS4_MULTI_1H00_2000.xml
-     - ./PDS4_MULTI_1H00_2000.JSON
+     - ./PDS4_MULTI_1F00_2000.xsd
+     - ./PDS4_MULTI_1F00_2000.sch
+     - ./PDS4_MULTI_1F00_2000.xml
+     - ./PDS4_MULTI_1F00_2000.JSON
 
 >>  INFO Exit(0)
