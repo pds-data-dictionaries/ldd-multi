@@ -3,13 +3,13 @@ PDS Validate Tool Report
 
 Configuration:
    Version                       2.1.4
-   Date                          2022-03-29T22:40:23Z
+   Date                          2022-03-29T22:52:59Z
 
 Parameters:
    Targets                       [file:/home/runner/work/ldd-multi/ldd-multi/test/multi-mvn_lpw_l2_lpiv_20200813_v02_r01_VALID.xml]
    Rule Type                     pds4.label
-   User Specified Schemas        [file:/home/runner/work/ldd-multi/ldd-multi/build/development/24964dec1a6e738cc9bb5b169bd01b2d57e443a1/1.15.0.0/PDS4_MULTI_1F00_2000.xsd, file:/tmp/PDS4_PDS_1F00.xsd]
-   User Specified Schematrons    [file:/home/runner/work/ldd-multi/ldd-multi/build/development/24964dec1a6e738cc9bb5b169bd01b2d57e443a1/1.15.0.0/PDS4_MULTI_1F00_2000.sch, file:/tmp/PDS4_PDS_1F00.sch]
+   User Specified Schemas        [file:/home/runner/work/ldd-multi/ldd-multi/build/development/b44ca17b75d6d5313042ec39c326ee3b755ce194/1.17.0.0/PDS4_MULTI_1H00_2000.xsd, file:/tmp/PDS4_PDS_1H00.xsd]
+   User Specified Schematrons    [file:/home/runner/work/ldd-multi/ldd-multi/build/development/b44ca17b75d6d5313042ec39c326ee3b755ce194/1.17.0.0/PDS4_MULTI_1H00_2000.sch, file:/tmp/PDS4_PDS_1H00.sch]
    Severity Level                WARNING
    Recurse Directories           true
    File Filters Used             [*.xml, *.XML]
@@ -23,7 +23,7 @@ Parameters:
 Product Level Validation Results
 
   FAIL: file:/home/runner/work/ldd-multi/ldd-multi/test/multi-mvn_lpw_l2_lpiv_20200813_v02_r01_VALID.xml
-      ERROR  [error.label.schematron]   line 33, 34: The attribute pds:information_model_version must be equal to the value '1.15.0.0'.
+      ERROR  [error.label.schematron]   line 33, 34: The attribute pds:Identification_Area/pds:information_model_version must be equal to the value '1.17.0.0'.
         1 product validation(s) completed
 
 Summary:
@@ -45,5 +45,5 @@ Summary:
     1            error.label.schematron
 
 End of Report
-Completed execution in 5913 ms
+Completed execution in 4919 ms
 
