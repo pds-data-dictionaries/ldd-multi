@@ -1,0 +1,605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1G00.sch" 
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://pds.nasa.gov/pds4/alt/v1/PDS4_ALT_1000.sch"
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/multi/v2/PDS4_MULTI_1G00_2000.sch"
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/mission/mvn/v1/PDS4_MVN_1D00_1110.sch"
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Observational
+   xmlns="http://pds.nasa.gov/pds4/pds/v1"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:alt="http://pds.nasa.gov/pds4/alt/v1"
+   xmlns:multi="http://pds.nasa.gov/pds4/multi/v2"
+   xmlns:mvn="http://pds.nasa.gov/pds4/mission/mvn/v1"
+   xsi:schemaLocation="
+      http://pds.nasa.gov/pds4/pds/v1
+      https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1H00.xsd
+
+      http://pds.nasa.gov/pds4/alt/v1
+      http://pds.nasa.gov/pds4/alt/v1/PDS4_ALT_1000.xsd
+
+      http://pds.nasa.gov/pds4/multi/v2
+      https://pds.nasa.gov/pds4/multi/v2/PDS4_MULTI_1G00_2000.xsd
+
+      http://pds.nasa.gov/pds4/mission/mvn/v1
+      https://pds.nasa.gov/pds4/mission/mvn/v1/PDS4_MVN_1D00_1110.xsd
+ ">
+   <Identification_Area>
+      <logical_identifier>urn:nasa:pds:maven.swea.calibrated:data.arc_pad:mvn_swe_l2_arcpad_20201113</logical_identifier>
+      <version_id>1.0</version_id>
+      <title>MAVEN SWEA Archive Rate Electron Pitch Angle Distributions for 2020-11-13</title>
+      <information_model_version>1.16.0.0</information_model_version>
+      <product_class>Product_Observational</product_class>
+      <Citation_Information>
+         <author_list>Mitchell, D. L.</author_list>
+         <publication_year>2021</publication_year>
+         <description>
+            MAVEN SWEA electron pitch angle distributions in units of differential energy flux (eV/cm**2 sec ster eV) at the MAVEN archive telemetry rate for 2020-11-13
+         </description>
+      </Citation_Information>
+      <Modification_History>
+         <Modification_Detail>
+            <modification_date>2021-03-30</modification_date>
+            <version_id>1.0</version_id>
+            <description>
+               Intial Version. Due to sporadic low energy suppression (discussion included in document collection) the energy band 3 - 25 eV has been flagged in these data.
+            </description>
+         </Modification_Detail>
+      </Modification_History>
+   </Identification_Area>
+   <Observation_Area>
+      <Time_Coordinates>
+         <start_date_time>2020-11-13T00:00:01.990Z</start_date_time>
+         <stop_date_time>2020-11-14T00:00:00.533Z</stop_date_time>
+      </Time_Coordinates>
+      <Primary_Result_Summary>
+         <purpose>Science</purpose>
+         <processing_level>Calibrated</processing_level>
+         <Science_Facets>
+            <domain>Magnetosphere</domain>
+            <discipline_name>Particles</discipline_name>
+            <facet1>Electrons</facet1>
+            <facet2>Solar Energetic</facet2>
+         </Science_Facets>
+      </Primary_Result_Summary>
+      <Investigation_Area>
+         <name>Mars Atmosphere and Volatile EvolutioN Mission</name>
+         <type>Mission</type>
+         <Internal_Reference>
+            <lid_reference>urn:nasa:pds:context:investigation:mission.maven</lid_reference>
+            <reference_type>data_to_investigation</reference_type>
+         </Internal_Reference>
+      </Investigation_Area>
+      <Observing_System>
+         <Observing_System_Component>
+            <name>MAVEN</name>
+            <type>Spacecraft</type>
+            <Internal_Reference>
+               <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.maven</lid_reference>
+               <reference_type>is_instrument_host</reference_type>
+            </Internal_Reference>
+         </Observing_System_Component>
+         <Observing_System_Component>
+            <name>Solar Wind Electron Analyzer</name>
+            <type>Instrument</type>
+            <Internal_Reference>
+               <lid_reference>urn:nasa:pds:context:instrument:swea.maven</lid_reference>
+               <reference_type>is_instrument</reference_type>
+            </Internal_Reference>
+         </Observing_System_Component>
+      </Observing_System>
+      <Target_Identification>
+         <name>Mars</name>
+         <type>Planet</type>
+         <Internal_Reference>
+            <lid_reference>urn:nasa:pds:context:target:planet.mars</lid_reference>
+            <reference_type>data_to_target</reference_type>
+         </Internal_Reference>
+      </Target_Identification>
+      <Mission_Area>
+         <mvn:MAVEN>
+            <mvn:mission_phase_name>EM-5</mvn:mission_phase_name>
+            <mvn:spacecraft_clock_start_count>4.3155287910203555E13</mvn:spacecraft_clock_start_count>
+            <mvn:spacecraft_clock_stop_count>4.316095012122809E13</mvn:spacecraft_clock_stop_count>
+            <mvn:mission_event_time_start_count>6.58497437834253E8</mvn:mission_event_time_start_count>
+            <mvn:mission_event_time_stop_count>6.585838353429047E8</mvn:mission_event_time_stop_count>
+            <mvn:Parameter>
+               <mvn:name>geom_factor</mvn:name>
+               <mvn:description>Full sensor geometric factor (per anode) at 1.4 keV</mvn:description>
+               <mvn:value>2.0249595E-4</mvn:value>
+            </mvn:Parameter>
+            <mvn:Parameter>
+               <mvn:name>accum_time</mvn:name>
+               <mvn:description>Accumulation Time</mvn:description>
+               <mvn:value>0.0043526785</mvn:value>
+            </mvn:Parameter>
+            <mvn:Parameter>
+               <mvn:name>num_dists</mvn:name>
+               <mvn:description>Number of distributions in file</mvn:description>
+               <mvn:value>43200</mvn:value>
+            </mvn:Parameter>
+         </mvn:MAVEN>
+      </Mission_Area>
+      <Discipline_Area>
+         <multi:Multidimensional_Data>
+            <multi:name>counts</multi:name>
+            <multi:description>Raw Instrument Counts</multi:description>
+            <multi:Primary_Value>
+               <Local_Internal_Reference>
+                  <local_identifier_reference>counts</local_identifier_reference>
+                  <local_reference_type>multi_to_primary_value</local_reference_type>
+               </Local_Internal_Reference>
+            </multi:Primary_Value>
+            <multi:Axis_Value>
+               <Local_Internal_Reference>
+                  <local_identifier_reference>epoch</local_identifier_reference>
+                  <local_reference_type>multi_to_axis_value</local_reference_type>
+               </Local_Internal_Reference>
+               <multi:primary_axis_number>1</multi:primary_axis_number>
+            </multi:Axis_Value>
+            <multi:Axis_Value>
+               <Local_Internal_Reference>
+                  <local_identifier_reference>energy</local_identifier_reference>
+                  <local_reference_type>multi_to_axis_value</local_reference_type>
+               </Local_Internal_Reference>
+               <multi:primary_axis_number>3</multi:primary_axis_number>
+            </multi:Axis_Value>
+            <multi:Face_Value>
+               <Local_Internal_Reference>
+                  <local_identifier_reference>pa</local_identifier_reference>
+                  <local_reference_type>multi_to_face_value</local_reference_type>
+               </Local_Internal_Reference>
+               <multi:Face_Axis>
+                  <multi:primary_axis_number>2</multi:primary_axis_number>
+                  <multi:face_axis_number>1</multi:face_axis_number>
+               </multi:Face_Axis>
+               <multi:Face_Axis>
+                  <multi:primary_axis_number>3</multi:primary_axis_number>
+                  <multi:face_axis_number>2</multi:face_axis_number>
+               </multi:Face_Axis>
+            </multi:Face_Value>
+         </multi:Multidimensional_Data>
+         <multi:Multidimensional_Data>
+            <multi:name>diff_en_fluxes</multi:name>
+            <multi:description>Calibrated differential energy flux</multi:description>
+            <multi:Primary_Value>
+               <Local_Internal_Reference>
+                  <local_identifier_reference>diff_en_fluxes</local_identifier_reference>
+                  <local_reference_type>multi_to_primary_value</local_reference_type>
+               </Local_Internal_Reference>
+            </multi:Primary_Value>
+            <multi:Axis_Value>
+               <Local_Internal_Reference>
+                  <local_identifier_reference>epoch</local_identifier_reference>
+                  <local_reference_type>multi_to_axis_value</local_reference_type>
+               </Local_Internal_Reference>
+               <multi:primary_axis_number>1</multi:primary_axis_number>
+            </multi:Axis_Value>
+            <multi:Axis_Value>
+               <Local_Internal_Reference>
+                  <local_identifier_reference>energy</local_identifier_reference>
+                  <local_reference_type>multi_to_axis_value</local_reference_type>
+               </Local_Internal_Reference>
+               <multi:primary_axis_number>3</multi:primary_axis_number>
+            </multi:Axis_Value>
+            <multi:Face_Value>
+               <Local_Internal_Reference>
+                  <local_identifier_reference>pa</local_identifier_reference>
+                  <local_reference_type>multi_to_face_value</local_reference_type>
+               </Local_Internal_Reference>
+               <multi:Face_Axis>
+                  <multi:primary_axis_number>2</multi:primary_axis_number>
+                  <multi:face_axis_number>1</multi:face_axis_number>
+               </multi:Face_Axis>
+               <multi:Face_Axis>
+                  <multi:primary_axis_number>3</multi:primary_axis_number>
+                  <multi:face_axis_number>2</multi:face_axis_number>
+               </multi:Face_Axis>
+            </multi:Face_Value>
+         </multi:Multidimensional_Data>
+         <alt:Alternate_Values>
+            <alt:name>time values</alt:name>
+            <alt:Data_Values>
+               <alt:Local_Internal_Reference>
+                  <alt:local_identifier_reference>epoch</alt:local_identifier_reference>
+                  <alt:local_reference_type>data_values_to_data_values</alt:local_reference_type>
+               </alt:Local_Internal_Reference>
+            </alt:Data_Values>
+            <alt:Data_Values>
+               <alt:Local_Internal_Reference>
+                  <alt:local_identifier_reference>time_met</alt:local_identifier_reference>
+                  <alt:local_reference_type>data_values_to_data_values</alt:local_reference_type>
+               </alt:Local_Internal_Reference>
+            </alt:Data_Values>
+            <alt:Data_Values>
+               <alt:Local_Internal_Reference>
+                  <alt:local_identifier_reference>time_unix</alt:local_identifier_reference>
+                  <alt:local_reference_type>data_values_to_data_values</alt:local_reference_type>
+               </alt:Local_Internal_Reference>
+            </alt:Data_Values>
+         </alt:Alternate_Values>
+      </Discipline_Area>
+   </Observation_Area>
+   <Reference_List>
+      <Internal_Reference>
+         <lidvid_reference>urn:nasa:pds:maven.spice:spice_kernels:lsk_naif0012.tls::1.0</lidvid_reference>
+         <reference_type>data_to_spice_kernel</reference_type>
+         <comment>
+            This data file was processed using the SPICE leapsecond kernel: naif0012.tls.
+         </comment>
+      </Internal_Reference>
+      <Internal_Reference>
+         <lidvid_reference>urn:nasa:pds:maven.spice:spice_kernels:sclk_mvn_sclkscet_00087.tsc::1.0</lidvid_reference>
+         <reference_type>data_to_spice_kernel</reference_type>
+         <comment>
+            This data file was processed using the SPICE MAVEN SCLK kernel: MVN_SCLKSCET.00087.tsc. 
+         </comment>
+      </Internal_Reference>
+   </Reference_List>
+   <File_Area_Observational>
+      <File>
+         <file_name>mvn_swe_l2_arcpad_20201113_v04_r02.cdf</file_name>
+         <creation_date_time>2021-03-30T14:53:42</creation_date_time>
+         <file_size unit="byte">886205414</file_size>
+         <md5_checksum>05e0ee7992dafce335963f79ca282986</md5_checksum>
+      </File>
+      <Header>
+         <name>CDF Header</name>
+         <offset unit="byte">0</offset>
+         <object_length unit="byte">404</object_length>
+         <parsing_standard_id>CDF 3.4 ISTP/IACG</parsing_standard_id>
+      </Header>
+      <Array>
+         <name>epoch</name>
+         <local_identifier>epoch</local_identifier>
+         <offset unit="byte">33150</offset>
+         <axes>1</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>Time, center of sample, in TT2000 time base. TT2000 is UTC time in nanoseconds from 2000-Jan-01 12:00:00.000 including leap seconds.</description>
+         <Element_Array>
+            <data_type>SignedMSB8</data_type>
+            <unit>ns</unit>
+         </Element_Array>
+          <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>43200</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+      </Array>
+      <Array>
+         <name>time_met</name>
+         <local_identifier>time_met</local_identifier>
+         <offset unit="byte">379254</offset>
+         <axes>1</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>Time, center of sample, in raw mission elapsed time.</description>
+         <Element_Array>
+            <data_type>IEEE754MSBDouble</data_type>
+            <unit>s</unit>
+         </Element_Array>
+          <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>43200</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+         <Special_Constants>
+            <invalid_constant>-1.0E31</invalid_constant>
+            <valid_maximum>5.4025914E8</valid_maximum>
+            <valid_minimum>0.0</valid_minimum>
+         </Special_Constants>
+      </Array>
+      <Array>
+         <name>time_unix</name>
+         <local_identifier>time_unix</local_identifier>
+         <offset unit="byte">725358</offset>
+         <axes>1</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>Time, center of sample, in Unix time. Unix time is elapsed seconds since 1970-Jan-01 00:00:00.000 without leap seconds.</description>
+         <Element_Array>
+            <data_type>IEEE754MSBDouble</data_type>
+            <unit>s</unit>
+         </Element_Array>
+          <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>43200</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+         <Special_Constants>
+            <invalid_constant>-1.0E31</invalid_constant>
+            <valid_maximum>1.92499194E9</valid_maximum>
+            <valid_minimum>1.3847328E9</valid_minimum>
+         </Special_Constants>
+      </Array>
+      <Array>
+         <name>binning</name>
+         <local_identifier>binning</local_identifier>
+         <offset unit="byte">1071455</offset>
+         <axes>1</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>Energy binning factor: 1 = 64 energies, 2 = 32 energies, 4 = 16 energies</description>
+         <Element_Array>
+            <data_type>UnsignedByte</data_type>
+         </Element_Array>
+          <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>43200</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+         <Special_Constants>
+            <invalid_constant>-1</invalid_constant>
+            <valid_maximum>4</valid_maximum>
+            <valid_minimum>1</valid_minimum>
+         </Special_Constants>
+      </Array>
+      <Array>
+         <name>counts</name>
+         <local_identifier>counts</local_identifier>
+         <offset unit="byte">1115171</offset>
+         <axes>3</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>Raw Instrument Counts</description>
+         <Element_Array>
+            <data_type>IEEE754MSBSingle</data_type>
+            <unit>counts</unit>
+         </Element_Array>
+          <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>43200</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+          <Axis_Array>
+            <axis_name>pitch angle</axis_name>
+            <elements>16</elements>
+            <sequence_number>2</sequence_number>
+         </Axis_Array>
+          <Axis_Array>
+            <axis_name>energy</axis_name>
+            <elements>64</elements>
+            <sequence_number>3</sequence_number>
+         </Axis_Array>
+         <Special_Constants>
+            <invalid_constant>-1.0E31</invalid_constant>
+            <valid_maximum>1.0E10</valid_maximum>
+            <valid_minimum>0.0</valid_minimum>
+         </Special_Constants>
+      </Array>
+      <Array>
+         <name>diff_en_fluxes</name>
+         <local_identifier>diff_en_fluxes</local_identifier>
+         <offset unit="byte">178062887</offset>
+         <axes>3</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>Calibrated differential energy flux</description>
+         <Element_Array>
+            <data_type>IEEE754MSBSingle</data_type>
+            <unit>eV/[eV cm^2 sr s]</unit>
+         </Element_Array>
+          <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>43200</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+          <Axis_Array>
+            <axis_name>pitch angle</axis_name>
+            <elements>16</elements>
+            <sequence_number>2</sequence_number>
+         </Axis_Array>
+          <Axis_Array>
+            <axis_name>energy</axis_name>
+            <elements>64</elements>
+            <sequence_number>3</sequence_number>
+         </Axis_Array>
+         <Special_Constants>
+            <invalid_constant>-1.0E31</invalid_constant>
+            <valid_maximum>1.0E14</valid_maximum>
+            <valid_minimum>0.0</valid_minimum>
+         </Special_Constants>
+      </Array>
+      <Array>
+         <name>g_engy</name>
+         <local_identifier>g_engy</local_identifier>
+         <offset unit="byte">355011099</offset>
+         <axes>1</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>Relative sensitivity as a function of energy</description>
+         <Element_Array>
+            <data_type>IEEE754MSBSingle</data_type>
+         </Element_Array>
+          <Axis_Array>
+            <axis_name>energy</axis_name>
+            <elements>64</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+         <Special_Constants>
+            <invalid_constant>-1.0E31</invalid_constant>
+            <valid_maximum>2.0</valid_maximum>
+            <valid_minimum>0.0</valid_minimum>
+         </Special_Constants>
+      </Array>
+      <Array>
+         <name>de_over_e</name>
+         <local_identifier>de_over_e</local_identifier>
+         <offset unit="byte">355011863</offset>
+         <axes>1</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>DeltaE/E (FWHM)</description>
+         <Element_Array>
+            <data_type>IEEE754MSBSingle</data_type>
+            <unit>eV/eV</unit>
+         </Element_Array>
+          <Axis_Array>
+            <axis_name>energy</axis_name>
+            <elements>64</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+         <Special_Constants>
+            <invalid_constant>-1.0E31</invalid_constant>
+            <valid_maximum>1.0</valid_maximum>
+            <valid_minimum>0.0</valid_minimum>
+         </Special_Constants>
+      </Array>
+      <Array>
+         <name>energy</name>
+         <local_identifier>energy</local_identifier>
+         <offset unit="byte">355013131</offset>
+         <axes>1</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>Energies</description>
+         <Element_Array>
+            <data_type>IEEE754MSBSingle</data_type>
+            <unit>eV</unit>
+         </Element_Array>
+          <Axis_Array>
+            <axis_name>energy</axis_name>
+            <elements>64</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+         <Special_Constants>
+            <invalid_constant>-1.0E31</invalid_constant>
+            <valid_maximum>50000.0</valid_maximum>
+            <valid_minimum>0.0</valid_minimum>
+         </Special_Constants>
+      </Array>
+      <Array>
+         <name>pa</name>
+         <local_identifier>pa</local_identifier>
+         <offset unit="byte">355013903</offset>
+         <axes>3</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>Pitch Angle</description>
+         <Element_Array>
+            <data_type>IEEE754MSBSingle</data_type>
+            <unit>degrees</unit>
+         </Element_Array>
+          <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>43200</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+          <Axis_Array>
+            <axis_name>pitch angle</axis_name>
+            <elements>16</elements>
+            <sequence_number>2</sequence_number>
+         </Axis_Array>
+          <Axis_Array>
+            <axis_name>energy</axis_name>
+            <elements>64</elements>
+            <sequence_number>3</sequence_number>
+         </Axis_Array>
+         <Special_Constants>
+            <invalid_constant>-1.0E31</invalid_constant>
+            <valid_maximum>180.0</valid_maximum>
+            <valid_minimum>-180.0</valid_minimum>
+         </Special_Constants>
+      </Array>
+      <Array>
+         <name>d_pa</name>
+         <local_identifier>d_pa</local_identifier>
+         <offset unit="byte">531961619</offset>
+         <axes>3</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>Pitch Angle Width</description>
+         <Element_Array>
+            <data_type>IEEE754MSBSingle</data_type>
+            <unit>degrees</unit>
+         </Element_Array>
+          <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>43200</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+          <Axis_Array>
+            <axis_name>pitch angle</axis_name>
+            <elements>16</elements>
+            <sequence_number>2</sequence_number>
+         </Axis_Array>
+          <Axis_Array>
+            <axis_name>energy</axis_name>
+            <elements>64</elements>
+            <sequence_number>3</sequence_number>
+         </Axis_Array>
+         <Special_Constants>
+            <invalid_constant>-1.0E31</invalid_constant>
+            <valid_maximum>180.0</valid_maximum>
+            <valid_minimum>-180.0</valid_minimum>
+         </Special_Constants>
+      </Array>
+      <Array>
+         <name>g_pa</name>
+         <local_identifier>g_pa</local_identifier>
+         <offset unit="byte">708909335</offset>
+         <axes>3</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>Relative sensitivity as a function of pitch angle</description>
+         <Element_Array>
+            <data_type>IEEE754MSBSingle</data_type>
+         </Element_Array>
+          <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>43200</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+          <Axis_Array>
+            <axis_name>pitch angle</axis_name>
+            <elements>16</elements>
+            <sequence_number>2</sequence_number>
+         </Axis_Array>
+          <Axis_Array>
+            <axis_name>energy</axis_name>
+            <elements>64</elements>
+            <sequence_number>3</sequence_number>
+         </Axis_Array>
+         <Special_Constants>
+            <invalid_constant>-1.0E31</invalid_constant>
+            <valid_maximum>2.0</valid_maximum>
+            <valid_minimum>0.0</valid_minimum>
+         </Special_Constants>
+      </Array>
+      <Array>
+         <name>b_azim</name>
+         <local_identifier>b_azim</local_identifier>
+         <offset unit="byte">885857556</offset>
+         <axes>1</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>Magnetic field azimuth in instrument coordiantes</description>
+         <Element_Array>
+            <data_type>IEEE754MSBSingle</data_type>
+            <unit>degrees</unit>
+         </Element_Array>
+          <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>43200</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+         <Special_Constants>
+            <invalid_constant>-1.0E31</invalid_constant>
+            <valid_maximum>360.0</valid_maximum>
+            <valid_minimum>0.0</valid_minimum>
+         </Special_Constants>
+      </Array>
+      <Array>
+         <name>b_elev</name>
+         <local_identifier>b_elev</local_identifier>
+         <offset unit="byte">886030856</offset>
+         <axes>1</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>Magnetic field elevation in instrument coordiantes</description>
+         <Element_Array>
+            <data_type>IEEE754MSBSingle</data_type>
+            <unit>degrees</unit>
+         </Element_Array>
+          <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>43200</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+         <Special_Constants>
+            <invalid_constant>-1.0E31</invalid_constant>
+            <valid_maximum>180.0</valid_maximum>
+            <valid_minimum>-180.0</valid_minimum>
+         </Special_Constants>
+      </Array>
+   </File_Area_Observational>
+</Product_Observational>
