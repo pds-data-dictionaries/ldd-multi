@@ -266,4 +266,39 @@
   		</DD_Rule_Statement>
 	</DD_Rule>
 	
+	<DD_Rule>
+  		<local_identifier>axis_value_array_exists</local_identifier>
+  		<rule_context>multi:Axis_Value</rule_context>
+  		<rule_assign>name="local_id" value="pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
+  		<DD_Rule_Statement>
+    			<rule_type>Assert</rule_type>
+    			<rule_test>//pds:Array/pds:local_identifier = $local_id</rule_test>
+    			<rule_message>In the multi:Axis_Value class, the local_identifier_reference (&lt;sch:value-of select='$local_id'/&gt;) must reference an array object.</rule_message>
+    			<rule_description>In the multi:Axis_Value class, the local_identifier_reference must reference an array object.</rule_description>
+  		</DD_Rule_Statement>
+	</DD_Rule>
+	
+	<DD_Rule>
+  		<local_identifier>aligned_value_array_exists</local_identifier>
+  		<rule_context>multi:Aligned_Value</rule_context>
+  		<rule_assign>name="local_id" value="pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
+  		<DD_Rule_Statement>
+    			<rule_type>Assert</rule_type>
+    			<rule_test>//pds:Array/pds:local_identifier = $local_id</rule_test>
+    			<rule_message>In the multi:Aligned_Value class, the local_identifier_reference (&lt;sch:value-of select='$local_id'/&gt;) must reference an array object.</rule_message>
+    			<rule_description>In the multi:Aligned_Value class, the local_identifier_reference must reference an array object.</rule_description>
+  		</DD_Rule_Statement>
+	</DD_Rule>
+	
+	<DD_Rule>
+  		<local_identifier>primary_value_array_exists</local_identifier>
+  		<rule_context>multi:Face_Value</rule_context>
+  		<rule_assign>name="local_id" value="pds:Local_Internal_Reference/pds:local_identifier_reference"</rule_assign>
+  		<DD_Rule_Statement>
+    			<rule_type>Assert</rule_type>
+    			<rule_test>//pds:Array/pds:local_identifier = $local_id</rule_test>
+    			<rule_message>In the multi:Face_Value class, the local_identifier_reference (&lt;sch:value-of select='$local_id'/&gt;) must reference an array object.</rule_message>
+    			<rule_description>In the multi:Face_Value class, the local_identifier_reference must reference an array object.</rule_description>
+  		</DD_Rule_Statement>
+	</DD_Rule>
 </Ingest_LDD>
