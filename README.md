@@ -1,26 +1,30 @@
-# Multi local data dictionary
+# Multidimensional (multi) Discipline Namespace
 
-The Multi dictionary contains classes that describe the composition of multidimensional data consisting of Array (and Array subclass) data objects. It provides a way to associated data objects and align the objects in general multi-dimensional structures. It supercedes the "particle" and "wave" local data dictionaries.
+The Multi dictionary contains classes that describe the composition of multidimensional data consisting of Array (and Array subclass) data objects. It provides a way to associated data objects and align the objects in general multi-dimensional structures. It supersedes the "particle" and "wave" namespaces.
 
-## Versions
+Steward: [Joe Mafi, PPI Node](@jmafi)
 
-- [1.0.0.0](src/1.0.0.0)
+# Documentation
 
-## Builds
+* [User Guide](docs/user-guide.md)
+* [Detailed Documentation](docs)
+* [Other PDS Namespace Documentation](https://pds-data-dictionaries.github.io/)
 
-A Local Data Dictionary (LDD) is built for each version of the [PDS4 Information Model](https://pds.nasa.gov/pds4/doc/im/).
-The build process insures compatiblity of the LDD with the core information model.
 
-This LDD has been built for the following versions of the PDS4 information model.
+# Latest Release
 
-- [1.9.0.0](build/1.9.0.0)
-	- package: [v1.9.0.0](https://github.com/nasa-pds/ldd-multi/releases/tag/v1.9.0.0)
-	
-## Notes
+<!-- UPDATE NEEDED - the URL to have #namespace-id, e.g. #disp, #geom, etc. -->
+* [PDS Namespace](https://pds.nasa.gov/datastandards/dictionaries/)
+* [GitHub](../../../releases/latest)
+* [Change log](CHANGELOG.md)
 
-Each build is generating using the [lddtool](https://pds.nasa.gov/pds4/software/ldd/) specific to a version of the [PDS4 Information Model](https://pds.nasa.gov/pds4/doc/im/).
 
-Documentation included in the source (src) directory is generated using the "pds-ldd-doc" tool in the [pds4-tools](https://github.com/nasa-pds/pds4-tools) package.
+# Feedback
 
-After a build the README.md files are updated (manually) to reflect the content of repository.
+Have a bug or feature request? Create one in the [PDS4 Issue Repo](https://github.com/pds-data-dictionaries/PDS4-LDD-Issue-Repo/issues/new/choose).
+
+
+# Developer Support
+
+[For more information](src/README.md)
 
