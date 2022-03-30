@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1G00.sch" 
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="http://pds.nasa.gov/pds4/alt/v1/PDS4_ALT_1000.sch"
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/multi/v2/PDS4_MULTI_1G00_2000.sch"
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://pds.nasa.gov/pds4/mission/mvn/v1/PDS4_MVN_1D00_1110.sch"
+   schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<Product_Observational
+   xmlns="http://pds.nasa.gov/pds4/pds/v1"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:alt="http://pds.nasa.gov/pds4/alt/v1"
+   xmlns:multi="http://pds.nasa.gov/pds4/multi/v2"
+   xmlns:mvn="http://pds.nasa.gov/pds4/mission/mvn/v1"
+   xsi:schemaLocation="
+      http://pds.nasa.gov/pds4/pds/v1
+      https://pds.nasa.gov/pds4/pds/v1/PDS4_PDS_1G00.xsd
+
+      http://pds.nasa.gov/pds4/alt/v1
+      http://pds.nasa.gov/pds4/alt/v1/PDS4_ALT_1000.xsd
+
+      http://pds.nasa.gov/pds4/multi/v2
+      https://pds.nasa.gov/pds4/multi/v2/PDS4_MULTI_1G00_2000.xsd
+
+      http://pds.nasa.gov/pds4/mission/mvn/v1
+      https://pds.nasa.gov/pds4/mission/mvn/v1/PDS4_MVN_1D00_1110.xsd
+ ">
+   <Identification_Area>
+      <logical_identifier>urn:nasa:pds:maven.lpw.calibrated:data.lp.iv:mvn_lpw_l2_lpiv_20200813</logical_identifier>
+      <version_id>1.1</version_id>
+      <title>MAVEN LPW Calibrated Current-Voltage Relationships</title>
+      <information_model_version>1.16.0.0</information_model_version>
+      <product_class>Product_Observational</product_class>
+      <Citation_Information>
+         <author_list>Andersson, L.</author_list>
+         <publication_year>2020</publication_year>
+         <description>
+            Current-Voltage relationships from the voltage sweep on the probes (one sweep every other sub-cycle) This file covers 2020-08-13.
+         </description>
+      </Citation_Information>
+      <Modification_History>
+         <Modification_Detail>
+            <modification_date>2020-09-07</modification_date>
+            <version_id>1.1</version_id>
+            <description>
+               The PDS label for this product has been updated. The data are unchanged.
+            </description>
+         </Modification_Detail>
+      </Modification_History>
+   </Identification_Area>
+   <Observation_Area>
+      <Time_Coordinates>
+         <start_date_time>2020-08-13T00:00:00.000Z</start_date_time>
+         <stop_date_time>2020-08-13T23:59:59.999Z</stop_date_time>
+      </Time_Coordinates>
+      <Primary_Result_Summary>
+         <purpose>Science</purpose>
+         <processing_level>Calibrated</processing_level>
+         <Science_Facets>
+            <domain>Magnetosphere</domain>
+            <discipline_name>Fields</discipline_name>
+            <facet1>Electric</facet1>
+            <facet2>Waves</facet2>
+         </Science_Facets>
+      </Primary_Result_Summary>
+      <Investigation_Area>
+         <name>Mars Atmosphere And Volatile EvolutioN Mission</name>
+         <type>Mission</type>
+         <Internal_Reference>
+            <lid_reference>urn:nasa:pds:context:investigation:mission.maven</lid_reference>
+            <reference_type>data_to_investigation</reference_type>
+         </Internal_Reference>
+      </Investigation_Area>
+      <Observing_System>
+         <Observing_System_Component>
+            <name>MAVEN</name>
+            <type>Host</type>
+            <Internal_Reference>
+               <lid_reference>urn:nasa:pds:context:instrument_host:spacecraft.maven</lid_reference>
+               <reference_type>is_instrument_host</reference_type>
+            </Internal_Reference>
+         </Observing_System_Component>
+         <Observing_System_Component>
+            <name>LPW</name>
+            <type>Instrument</type>
+            <Internal_Reference>
+               <lid_reference>urn:nasa:pds:context:instrument:lpw.maven</lid_reference>
+               <reference_type>is_instrument</reference_type>
+            </Internal_Reference>
+         </Observing_System_Component>
+      </Observing_System>
+      <Target_Identification>
+         <name>Mars</name>
+         <type>Planet</type>
+         <Internal_Reference>
+            <lid_reference>urn:nasa:pds:context:target:planet.mars</lid_reference>
+            <reference_type>data_to_target</reference_type>
+         </Internal_Reference>
+      </Target_Identification>
+<!--       <Mission_Area>
+         <mvn:MAVEN>
+            <mvn:mission_phase_name>EM-4</mvn:mission_phase_name>
+         </mvn:MAVEN>
+      </Mission_Area> -->
+      <Discipline_Area>
+
+         <multi:Multidimensional_Data>
+            <multi:name>Sweep Current (y)</multi:name>
+            <multi:description>
+               Measured current (y) from the probe as the potential of the probe is changed in the time order of the sweep.
+            </multi:description>
+            <multi:Primary_Value>
+               <Local_Internal_Reference>
+                  <local_identifier_reference>data</local_identifier_reference>
+                  <local_reference_type>multi_to_primary_value</local_reference_type>
+               </Local_Internal_Reference>
+            </multi:Primary_Value>
+            <multi:Axis_Value>
+               <Local_Internal_Reference>
+                  <local_identifier_reference>blah</local_identifier_reference>
+                  <local_reference_type>multi_to_axis_value</local_reference_type>
+               </Local_Internal_Reference>
+               <multi:primary_axis_number>1</multi:primary_axis_number>
+            </multi:Axis_Value>
+            <multi:Aligned_Value>
+               <Local_Internal_Reference>
+                  <local_identifier_reference>nope</local_identifier_reference>
+                  <local_reference_type>multi_to_aligned_value</local_reference_type>
+               </Local_Internal_Reference>
+            </multi:Aligned_Value>
+            <multi:Aligned_Value>
+               <Local_Internal_Reference>
+                  <local_identifier_reference>dvolt</local_identifier_reference>
+                  <local_reference_type>multi_to_aligned_value</local_reference_type>
+               </Local_Internal_Reference>
+            </multi:Aligned_Value>
+            <multi:Aligned_Value>
+               <Local_Internal_Reference>
+                  <local_identifier_reference>ddata</local_identifier_reference>
+                  <local_reference_type>multi_to_aligned_value</local_reference_type>
+               </Local_Internal_Reference>
+            </multi:Aligned_Value>
+         </multi:Multidimensional_Data>   
+<!--          <alt:Alternate_Values>
+            <alt:name>time values</alt:name>
+            <alt:Data_Values>
+               <alt:Local_Internal_Reference>
+                  <alt:local_identifier_reference>epoch</alt:local_identifier_reference>
+                  <alt:local_reference_type>data_values_to_data_values</alt:local_reference_type>
+               </alt:Local_Internal_Reference>
+            </alt:Data_Values>
+            <alt:Data_Values>
+               <alt:Local_Internal_Reference>
+                  <alt:local_identifier_reference>time_unix</alt:local_identifier_reference>
+                  <alt:local_reference_type>data_values_to_data_values</alt:local_reference_type>
+               </alt:Local_Internal_Reference>
+            </alt:Data_Values>
+         </alt:Alternate_Values> -->
+      </Discipline_Area>
+   </Observation_Area>
+   <File_Area_Observational>
+      <File>
+         <file_name>No.Data</file_name>
+         <creation_date_time>2020-09-07T13:34:06</creation_date_time>
+         <file_size unit="byte">0</file_size>
+         <!--
+         <md5_checksum>460b2abe21505c0741ddec768a62c8c6</md5_checksum>
+          -->
+      </File>
+      <Header>
+         <name>CDF Header</name>
+         <offset unit="byte">0</offset>
+         <object_length unit="byte">404</object_length>
+         <parsing_standard_id>CDF 3.4 ISTP/IACG</parsing_standard_id>
+      </Header>
+      <Array>
+         <name>Sweep Current (y)</name>
+         <local_identifier>data</local_identifier>
+         <offset unit="byte">42256</offset>
+         <axes>2</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>
+	    Measured current (y) from the probe as the potential of the probe is changed in the time order of the sweep.
+         </description>
+         <Element_Array>
+            <data_type>IEEE754MSBSingle</data_type>
+            <unit>A</unit>
+         </Element_Array>
+           <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>4782</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+           <Axis_Array>
+            <axis_name>potential</axis_name>
+            <elements>128</elements>
+            <sequence_number>2</sequence_number>
+         </Axis_Array>
+      </Array>
+      <Array>
+         <name>TT2000 Time</name>
+         <local_identifier>epoch</local_identifier>
+         <offset unit="byte">2492219</offset>
+         <axes>1</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>
+	    CDF TT2000 time of the data point (UTC time from 2000-01-01T12:00:00 in nanoseconds, including leap seconds).
+         </description>
+         <Element_Array>
+            <data_type>SignedMSB8</data_type>
+            <unit>ns</unit>
+         </Element_Array>
+           <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>4782</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+      </Array>
+      <Array>
+         <name>Unix Time (x)</name>
+         <local_identifier>time_unix</local_identifier>
+         <offset unit="byte">2532087</offset>
+         <axes>1</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>
+	    Unix time (x) of the data point (seconds elapsed since 1970-01-01T00:00:00, does not include leap seconds).
+         </description>
+         <Element_Array>
+            <data_type>IEEE754MSBDouble</data_type>
+            <unit>s</unit>
+         </Element_Array>
+           <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>4782</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+      </Array>
+      <Array>
+         <name>Sweep Potential (v)</name>
+         <local_identifier>volt</local_identifier>
+         <offset unit="byte">2571964</offset>
+         <axes>2</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>
+	    Sweeping potential (v) in the tme order of the sweep.
+         </description>
+         <Element_Array>
+            <data_type>IEEE754MSBSingle</data_type>
+            <unit>V</unit>
+         </Element_Array>
+           <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>4782</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+           <Axis_Array>
+            <axis_name>potential</axis_name>
+            <elements>128</elements>
+            <sequence_number>2</sequence_number>
+         </Axis_Array>
+      </Array>
+      <Array>
+         <name>Sweep Potential Uncertainty (dv)</name>
+         <local_identifier>dvolt</local_identifier>
+         <offset unit="byte">5021977</offset>
+         <axes>2</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>
+	    Uncertainty in the applied potential (dv).
+         </description>
+         <Element_Array>
+            <data_type>IEEE754MSBSingle</data_type>
+            <unit>V</unit>
+         </Element_Array>
+           <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>4782</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+           <Axis_Array>
+            <axis_name>potential</axis_name>
+            <elements>128</elements>
+            <sequence_number>2</sequence_number>
+         </Axis_Array>
+      </Array>
+      <Array>
+         <name>Sweep Current Uncertainty (dy)</name>
+         <local_identifier>ddata</local_identifier>
+         <offset unit="byte">7472008</offset>
+         <axes>2</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>
+	    Uncertainty in the measured current (dy).
+         </description>
+         <Element_Array>
+            <data_type>IEEE754MSBSingle</data_type>
+            <unit>A</unit>
+         </Element_Array>
+           <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>4782</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+           <Axis_Array>
+            <axis_name>potential</axis_name>
+            <elements>128</elements>
+            <sequence_number>2</sequence_number>
+         </Axis_Array>
+      </Array>
+      <Array>
+         <name>Quality of IV-sweep (flag)</name>
+         <local_identifier>flag</local_identifier>
+         <offset unit="byte">9922701</offset>
+         <axes>1</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>
+	    This value indicates the data quality on a scale of 0-100, with 100 being best. Use data with flag values above 50. Please refer to the instrument SIS for details.
+         </description>
+         <Element_Array>
+            <data_type>IEEE754MSBSingle</data_type>
+         </Element_Array>
+           <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>4782</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+      </Array>
+      <Array>
+         <name>Instrument Information (info)</name>
+         <local_identifier>info</local_identifier>
+         <offset unit="byte">9943946</offset>
+         <axes>1</axes>
+         <axis_index_order>Last Index Fastest</axis_index_order>
+         <description>
+	    This value contains instrument setting information. Please refer to the instrument SIS for details.
+         </description>
+         <Element_Array>
+            <data_type>IEEE754MSBSingle</data_type>
+         </Element_Array>
+           <Axis_Array>
+            <axis_name>time</axis_name>
+            <elements>4782</elements>
+            <sequence_number>1</sequence_number>
+         </Axis_Array>
+      </Array>
+   </File_Area_Observational>
+</Product_Observational>
