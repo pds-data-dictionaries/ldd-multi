@@ -1,0 +1,68 @@
+Syntax error near {...:local_identifier = $local_...} at char 44 in expression in xsl:when/@test on line 297 column 74 
+  XPST0003: Unexpected token "]" beyond end of expression
+java.lang.reflect.InvocationTargetException
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at gov.nasa.pds.tools.validate.rule.AbstractValidationRule.execute(AbstractValidationRule.java:71)
+	at org.apache.commons.chain.impl.ChainBase.execute(ChainBase.java:191)
+	at gov.nasa.pds.tools.validate.task.ValidationTask.execute(ValidationTask.java:133)
+	at gov.nasa.pds.tools.validate.task.BlockingTaskManager.submit(BlockingTaskManager.java:27)
+	at gov.nasa.pds.tools.label.LocationValidator.validate(LocationValidator.java:275)
+	at gov.nasa.pds.validate.ValidateLauncher.doValidation(ValidateLauncher.java:1333)
+	at gov.nasa.pds.validate.ValidateLauncher.processMain(ValidateLauncher.java:1590)
+	at gov.nasa.pds.validate.ValidateLauncher.main(ValidateLauncher.java:1636)
+Caused by: java.lang.NullPointerException
+	at gov.nasa.pds.tools.label.LabelValidator.parseAndValidate(LabelValidator.java:563)
+	at gov.nasa.pds.tools.validate.rule.pds4.LabelValidationRule.validateLabel(LabelValidationRule.java:298)
+	... 12 more
+
+PDS Validate Tool Report
+
+Configuration:
+   Version                       2.1.4
+   Date                          2022-03-30T21:55:03Z
+
+Parameters:
+   Targets                       [file:/home/runner/work/ldd-multi/ldd-multi/build/development/345927cf3491314e8d1d336c81b252f4c995072d/1.16.0.0/PDS4_MULTI_1G00_2000.xml]
+   Rule Type                     pds4.label
+   User Specified Schemas        [file:/home/runner/work/ldd-multi/ldd-multi/build/development/345927cf3491314e8d1d336c81b252f4c995072d/1.16.0.0/PDS4_MULTI_1G00_2000.xsd, file:/tmp/PDS4_PDS_1G00.xsd]
+   User Specified Schematrons    [file:/home/runner/work/ldd-multi/ldd-multi/build/development/345927cf3491314e8d1d336c81b252f4c995072d/1.16.0.0/PDS4_MULTI_1G00_2000.sch, file:/tmp/PDS4_PDS_1G00.sch]
+   Severity Level                WARNING
+   Recurse Directories           true
+   File Filters Used             [*.xml, *.XML]
+   Data Content Validation       off
+   Product Level Validation      on
+   Max Errors                    100000
+   Registered Contexts File      /tmp/validate-2.1.4/resources/registered_context_products.json
+
+
+
+Product Level Validation Results
+
+  FAIL: file:/home/runner/work/ldd-multi/ldd-multi/build/development/345927cf3491314e8d1d336c81b252f4c995072d/1.16.0.0/PDS4_MULTI_1G00_2000.xml
+      ERROR  [error.validation.internal_error]   Error executing validationTask: java.lang.NullPointerException
+        1 product validation(s) completed
+
+Summary:
+
+  1 error(s)
+  0 warning(s)
+
+  Product Validation Summary:
+    0          product(s) passed
+    1          product(s) failed
+    0          product(s) skipped
+
+  Referential Integrity Check Summary:
+    0          check(s) passed
+    0          check(s) failed
+    0          check(s) skipped
+
+  Message Types:
+    1            error.validation.internal_error
+
+End of Report
+Completed execution in 6051 ms
+
