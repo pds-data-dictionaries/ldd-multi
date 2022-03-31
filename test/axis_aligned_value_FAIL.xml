@@ -118,6 +118,7 @@
             </multi:Primary_Value>
             <multi:Axis_Value>
                <Local_Internal_Reference>
+                  <!-- To test axis_value_array_exists -->
                   <local_identifier_reference>blah</local_identifier_reference>
                   <local_reference_type>multi_to_axis_value</local_reference_type>
                </Local_Internal_Reference>
@@ -125,6 +126,7 @@
             </multi:Axis_Value>
             <multi:Aligned_Value>
                <Local_Internal_Reference>
+                  <!-- To test aligned_value_array_exists -->
                   <local_identifier_reference>nope</local_identifier_reference>
                   <local_reference_type>multi_to_aligned_value</local_reference_type>
                </Local_Internal_Reference>

@@ -134,8 +134,8 @@
                   <local_identifier_reference>epoch</local_identifier_reference>
                   <local_reference_type>multi_to_axis_value</local_reference_type>
                </Local_Internal_Reference>
+               <!-- to test duplicating axis_number (test needed) -->
                <multi:primary_axis_number>3</multi:primary_axis_number>
-              <!-- to test duplicating axis_number -->
             </multi:Axis_Value>
             <multi:Axis_Value>
                <Local_Internal_Reference>
@@ -146,7 +146,8 @@
             </multi:Axis_Value>
             <multi:Face_Value>
                <Local_Internal_Reference>
-                  <local_identifier_reference>pa</local_identifier_reference>
+                  <!-- To test face_value_array_exists -->
+                  <local_identifier_reference>pa_test</local_identifier_reference>
                   <local_reference_type>multi_to_face_value</local_reference_type>
                </Local_Internal_Reference>
                <multi:Face_Axis>
@@ -164,7 +165,8 @@
             <multi:description>Calibrated differential energy flux</multi:description>
             <multi:Primary_Value>
                <Local_Internal_Reference>
-                  <local_identifier_reference>diff_en_fluxes</local_identifier_reference>
+                  <!-- To test primary_value_array_exists -->
+                  <local_identifier_reference>diff_en_fluxes_test</local_identifier_reference>
                   <local_reference_type>multi_to_primary_value</local_reference_type>
                </Local_Internal_Reference>
             </multi:Primary_Value>
@@ -177,8 +179,8 @@
             </multi:Axis_Value>
             <multi:Axis_Value>
                <Local_Internal_Reference>
+                  <!-- To test axis_value_array_exists -->
                   <local_identifier_reference>engy</local_identifier_reference>
-                 <!-- to test local_identifier match -->
                   <local_reference_type>multi_to_axis_value</local_reference_type>
                </Local_Internal_Reference>
                <multi:primary_axis_number>3</multi:primary_axis_number>
