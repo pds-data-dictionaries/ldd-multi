@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:multi  Version:2.0.0.0 - Wed Mar 30 22:22:09 UTC 2022 -->
+  <!-- PDS4 Schematron for Name Space Id:multi  Version:2.0.0.0 - Fri Apr 01 16:40:10 UTC 2022 -->
   <!-- Generated from the PDS4 Information Model Version 1.16.0.0 - System Build 11.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
@@ -49,6 +49,14 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
+    <sch:rule context="multi:Face_Value">
+      <sch:let name="local_id" value="pds:Local_Internal_Reference/pds:local_identifier_reference"/>
+      <sch:assert test="//pds:Array/pds:local_identifier = $local_id">
+        <title>face_value_array_exists/Rule</title>
+        In the multi:Face_Value class, the local_identifier_reference (<sch:value-of select='$local_id'/>) must reference an array object.</sch:assert>
+    </sch:rule>
+  </sch:pattern>
+  <sch:pattern>
     <sch:rule context="multi:Face_Value/pds:Local_Internal_Reference">
       <sch:assert test="pds:local_reference_type = 'multi_to_face_value'">
         <title>face_value_reference_type/Rule</title>
@@ -56,11 +64,11 @@
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
-    <sch:rule context="multi:Face_Value">
+    <sch:rule context="multi:Primary_Value">
       <sch:let name="local_id" value="pds:Local_Internal_Reference/pds:local_identifier_reference"/>
       <sch:assert test="//pds:Array/pds:local_identifier = $local_id">
         <title>primary_value_array_exists/Rule</title>
-        In the multi:Face_Value class, the local_identifier_reference (<sch:value-of select='$local_id'/>) must reference an array object.</sch:assert>
+        In the multi:Primary_Value class, the local_identifier_reference (<sch:value-of select='$local_id'/>) must reference an array object.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
