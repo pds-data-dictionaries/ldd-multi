@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!-- PDS4 Schematron for Name Space Id:multi  Version:2.0.0.0 - Thu Jun 02 19:12:18 UTC 2022 -->
-  <!-- Generated from the PDS4 Information Model Version 1.18.0.0 - System Build 12.1 -->
+  <!-- PDS4 Schematron for Name Space Id:multi  Version:2.0.0.0 - Thu Oct 20 21:54:25 UTC 2022 -->
+  <!-- Generated from the PDS4 Information Model Version 1.16.0.0 - System Build 11.1 -->
   <!-- *** This PDS4 schematron file is an operational deliverable. *** -->
 <sch:schema xmlns:sch="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
 
@@ -21,21 +21,21 @@
   <sch:pattern>
     <sch:rule context="multi:Aligned_Value/pds:Local_Internal_Reference">
       <sch:assert test="pds:local_reference_type = 'multi_to_aligned_value'">
-        <title>aligned_value_reference_type/Rule</title>
+        <title>multi:Aligned_Value/pds:Local_Internal_Reference/Rule</title>
         For Local_Internal_Reference in multi:Aligned_Value, pds:local_reference_type must be 'multi_to_aligned_value'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="multi:Axis_Value/pds:Local_Internal_Reference">
       <sch:assert test="pds:local_reference_type = 'multi_to_axis_value'">
-        <title>axis_value_reference_type/Rule</title>
+        <title>multi:Axis_Value/pds:Local_Internal_Reference/Rule</title>
         For Local_Internal_Reference in multi:Axis_Value, pds:local_reference_type must be 'multi_to_axis_value'.</sch:assert>
     </sch:rule>
   </sch:pattern>
   <sch:pattern>
     <sch:rule context="multi:Face_Value/pds:Local_Internal_Reference">
       <sch:assert test="pds:local_reference_type = 'multi_to_face_value'">
-        <title>face_value_reference_type/Rule</title>
+        <title>multi:Face_Value/pds:Local_Internal_Reference/Rule</title>
         For Local_Internal_Reference in multi:Face_Value, pds:local_reference_type must be 'multi_to_face_value'.</sch:assert>
     </sch:rule>
   </sch:pattern>
@@ -43,7 +43,7 @@
     <sch:rule context="multi:Primary_Value/pds:Local_Internal_Reference">
       <sch:assert test="pds:local_reference_type = 'multi_to_primary_value'
 			">
-        <title>primary_value_reference_type/Rule</title>
+        <title>multi:Primary_Value/pds:Local_Internal_Reference/Rule</title>
         For Local_Internal_Reference in multi:Primary_Value, pds:local_reference_type must be 'multi_to_primary_value'.
 			</sch:assert>
     </sch:rule>
