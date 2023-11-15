@@ -1,0 +1,39 @@
+
+>>  INFO LDDTOOL Version: 14.3.0
+>>  INFO IM Version Id: 1.16.0.0
+>>  INFO IM Namespace Id: pds
+>>  INFO IM Label Version Id: 1.22
+>>  INFO Date: Thu Nov 02 23:33:27 UTC 2023
+>>  INFO PARENT_DIR: /tmp/lddtool-14.3.0
+>>  INFO SCRIPT_DIR: /tmp/lddtool-14.3.0/bin
+>>  INFO LIB_DIR: /tmp/lddtool-14.3.0/lib
+
+>>> INFO Init:  - Config.Properties Namespace Id Found:multi
+>>> INFO Init:  - Config.Properties Namespace Id Using:multi
+>>> INFO Init:  - LDD Dictionary_Type is Discipline
+>>> INFO Attribute: <primary_axis_number> - The default minimum value provided by the attribute's data type is being overridden with 1
+>>> INFO Attribute: <face_axis_number> - The default minimum value provided by the attribute's data type is being overridden with 1
+
+ -- LDDTool Execution Summary --
+     0 warning(s)
+     0 error(s)
+     0 fatal error(s)
+
+Input:
+
+     - IM Version: 1G00
+     - PDS4 Flag: true
+     - LDD Flag: true
+     - IM Version: true
+     - Export JSON Flag: true
+
+     - Ingest LDD(s): /home/runner/work/ldd-multi/ldd-multi/src/PDS4_MULTI_IngestLDD.xml
+
+Output:
+
+     - ./PDS4_MULTI_1G00_2000.xsd
+     - ./PDS4_MULTI_1G00_2000.sch
+     - ./PDS4_MULTI_1G00_2000.xml
+     - ./export/JSON/PDS4_PDS_1G00.JSON
+
+>>  INFO Exit(0)
