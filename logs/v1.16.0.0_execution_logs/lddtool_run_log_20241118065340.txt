@@ -1,10 +1,10 @@
 
->>  INFO LDDTOOL Version: 15.1.0
+>>  INFO LDDTOOL Version: 15.2.2
 >>  INFO IM Version Id: 1.16.0.0
 >>  INFO IM Namespace Id: pds
 >>  INFO IM Label Version Id: 1.22
->>  INFO Date: Fri May 24 20:10:09 UTC 2024
->>  INFO PARENT_DIR: /tmp/lddtool-15.1.0/Data/
+>>  INFO Date: Mon Nov 18 06:53:40 UTC 2024
+>>  INFO PARENT_DIR: /tmp/lddtool-15.2.2/Data/
 
 >>> INFO Init:  - Config.Properties Namespace Id Found:multi
 >>> INFO Init:  - Config.Properties Namespace Id Using:multi
@@ -32,6 +32,6 @@ Output:
      - ./PDS4_MULTI_1G00_2000.xsd
      - ./PDS4_MULTI_1G00_2000.sch
      - ./PDS4_MULTI_1G00_2000.xml
-     - ./export/JSON/PDS4_PDS_1G00.JSON
+     - ./export/PDS4_PDS_1G00.JSON
 
 >>  INFO Exit(0)
